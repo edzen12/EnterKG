@@ -44,3 +44,27 @@
 .blockSearch form .form-select{
     padding: 0!important;
 }
+
+.categoriesNames .accordion-button{
+    background-color: #d80000;
+    color: white;
+    font-weight: bold;
+}
+.categoriesNames .accordion-button:not(.collapsed){
+    background: #a80000;
+    color: white;
+}
+.categoriesNames .accordion-body{
+    background-color: black;
+}
+.categoriesNames .accordion-body a{
+    color: white;
+    text-decoration: none;
+}
+.categoriesNames .list-group-item {
+    background-color: black;
+    border-color: #444;
+}
+.categoriesNames .accordion-body{
+    padding: 0!important;
+}
