@@ -1,6 +1,96 @@
 {% extends "base.html" %}
 
-{% block content %}
-    <h1>Привет всем!</h1>
-    
+{% block content %} 
+<header class="header">
+    <div class="container" style="border:solid 2px black">
+        <!--  -->
+        <div class="row mt-3">
+            <div class="col-lg-5">
+                <div class="headerBlockFirstImage">
+                    <a href="#">
+                    <img src="https://enter.kg/images/stories/site/mlogo2.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="headerBlockSecondImage">
+                    <a href="#">
+                    <img src="https://enter.kg/images/rightslider/bts_Enter.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <ul class="nav mt-2">
+            <li><a href="#" class="nav-link">Главная</a></li>
+            <li><a href="#" class="nav-link">О компании</a></li>
+            <li><a href="#" class="nav-link">Доставка</a></li>
+            <li><a href="#" class="nav-link">Кредит</a></li>
+            <li><a href="#" class="nav-link">Гарантия</a></li>
+            <li><a href="#" class="nav-link">О чате</a></li>
+            <li><a href="#" class="nav-link">Статьи</a></li>
+        </ul>
+    </div>
+</header>
+<!--  -->
+<section>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-lg-2 categoriesNames">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Процессоры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Ноутбуки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Корпуса для ПК</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Видеокарты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Системы охлаждения</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-8">
+                <div class="container">
+                    <div class="alertText">
+                        <p class="redTextAlert"><u>Уважаемые покупатели, уведомляем Вас о повышении цен на оперативную память, ССД и жёсткие диски. В связи с перебоями на производстве, при заказах на данную продукцию, просьба обращаться к нашим сотрудникам для уточнения цены и количества на складе.</u></p>
+                        <p>По возникающим вопросам звоните по телефонам  0 312 611 300 (ул. Московская 195 Схема проезда ), или 0 312 611 333 (проспект Чуй 170 Схема проезда ) а также можете спрашивать в Чате или в разделе Контакты.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="blockSearch">
+                    <p>Поиск по сайту</p>
+                    <form>
+                        <input type="text" name="q" placeholder="что ищем">
+                        <select class="form-select mt-1" aria-label="Все категории">
+                            <option selected>Все категории</option>
+                            <option value="1">Мониторы</option>
+                            <option value="2">Ноутбуки</option>
+                            <option value="3">Проекторы</option>
+                        </select>
+                    </form>
+                </div>
+                <!--  -->
+                <div class="blockCart">
+
+                </div>
+                <!--  -->
+                <div class="blockQR">
+
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--  -->
+<footer>
+</footer>
+ <!--  -->
 {% endblock content %}

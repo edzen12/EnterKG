@@ -1,0 +1,46 @@
+.header{
+    text-align: center;
+} 
+.header li{
+    background-color: black;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 5px; 
+}
+.header li a{
+    color: white;
+}
+.categoriesNames li{
+    background-color: red;
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+.categoriesNames li a{
+    color: white;
+    font-size: 13px;
+}
+.alertText{
+    border: solid 1px red;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.redTextAlert{
+    color: red;
+}
+.blockSearch p{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+.blockSearch form .form-select{
+    padding: 0!important;
+}
