@@ -68,3 +68,32 @@
 .categoriesNames .accordion-body{
     padding: 0!important;
 }
+
+.ListProduct{
+    margin-top: 20px;
+    border-bottom:1px dashed #444;
+}
+.ListProduct ul{
+    display: flex;
+    justify-content: space-between;
+}
+.ListProduct li{
+    list-style-type: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.ListProduct li a{
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.ListProduct .price{
+    color: #db1d1d;
+    font-size: 20px;
+}

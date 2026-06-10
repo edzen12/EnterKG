@@ -9,9 +9,14 @@
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
   </head>
   <body>
+
+    {% include "header.html" %}
     
     {% block content %}
+
     {% endblock content %}
+
+    {% include "footer.html" %}
     
     <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/js/popper.min.js' %}" ></script>
