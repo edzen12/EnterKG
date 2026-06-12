@@ -1,0 +1,30 @@
+<div class="col-lg-2 categoriesNames">
+    <div class="accordion" id="categoriesAccordion">
+        {% for category in sidebar_categories %}
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button type="button" 
+                class="accordion-button collapsed"
+                data-bs-toggle='collapse' 
+                data-bs-target='#category{{category.id}}'>
+                    {{category.name}}
+                </button>
+            </h2>
+            <div id="category{{category.id}}" 
+                class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <ul class='list-group list-group-flush'>
+                        {% for child in category.children.all %}
+                        <li class="list-group-item">
+                            <a href="{% url 'category_detail' child.slug %}">
+                                {{child.name}} ({{ child.products_count }})
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

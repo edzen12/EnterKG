@@ -6,34 +6,9 @@
 <section>
     <div class="container">
         <div class="row mt-3">
-            <div class="col-lg-2 categoriesNames">
-                <div class="accordion" id="categoriesAccordion">
-                    {% for category in categories %}
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button type="button" 
-                            class="accordion-button collapsed"
-                            data-bs-toggle='collapse' 
-                            data-bs-target='#category{{category.id}}'>
-                                {{category.name}}
-                            </button>
-                        </h2>
-                       <div id="category{{category.id}}" 
-                            class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul class='list-group list-group-flush'>
-                                    {% for child in category.children.all %}
-                                    <li class="list-group-item">
-                                        <a href="#">{{child.name}}</a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
+
+            {% include "includes/left_sidebar.html" %}
+
             <div class="col-lg-8">
                 <div class="container">
                     <div class="alertText">
@@ -132,29 +107,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
-                <div class="blockSearch">
-                    <p>Поиск по сайту</p>
-                    <form>
-                        <input type="text" name="q" placeholder="что ищем">
-                        <select class="form-select mt-1" aria-label="Все категории">
-                            <option selected>Все категории</option>
-                            <option value="1">Мониторы</option>
-                            <option value="2">Ноутбуки</option>
-                            <option value="3">Проекторы</option>
-                        </select>
-                    </form>
-                </div>
-                <!--  -->
-                <div class="blockCart">
 
-                </div>
-                <!--  -->
-                <div class="blockQR">
-
-                </div>
-                <!--  -->
-            </div>
+            {% include "includes/right_sidebar.html" %}
+            
         </div>
     </div>
 </section>

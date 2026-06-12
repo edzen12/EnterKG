@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import TemplateView, DetailView 
 from apps.category.models import Category
 from apps.product.models import Product
 
@@ -8,12 +8,6 @@ class HomeView(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['categories'] = (
-            Category.objects.filter(
-                parent__isnull=True, is_active=True).prefetch_related(
-                    'children'
-                )
-        )
         context['products']= (
             Product.objects.select_related('category', 'brand').filter(
                 is_active=True
@@ -29,9 +23,12 @@ class CategoryDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['categories'] = (
-            Category.objects.filter(
-                parent__isnull=True, is_active=True
-            ).prefetch_related('children')
+        context['products'] = (
+            Product.objects.filter(
+                category=self.object, is_active=True
+            ).select_related(
+                'brand',
+                'category'
+            )
         )
-        context['']
+        return context
